@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Detalle de la comida</h1>
+<h3 th:text="'Nombre: '+ ${comida.nombre}"></h3>
+<h3 th:text="'Descripcion: '+ ${comida.descripcion}"></h3>
+<h3 th:text="'Precio: '+ ${comida.precio}"></h3>
+<h3 th:text="'Descuento: '+ ${comida.descuento}"></h3>
+</body>
+</html>

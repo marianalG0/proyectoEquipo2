@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> Feane </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+<body style="background-color:#FBF7E8">
+<header th:insert="fragments/menu.html :: navegador" style="background-color:#222831"></header>
+<div><center>
+<img th:src="@{/images/favicon.png}" width="60" height="60">
+	<img th:src="@{/images/logo.png}" width="150" height="150">
+	</div></center>
+	<center><h1 class="text-dark"  style="background-color:#ffbe33">Lista de Comidas</h1></center>
+	<table class="table table-striped table-hover table-bordered" style="background-color:#222831">
+	<tr>
+		<th class="text-white">Imagen</th>
+		<th class="text-white">Id</th>
+		<th class="text-white">Nombre</th>
+		<th class="text-white">Descripcion</th>
+		<th class="text-white">Precio</th>
+		<th class="text-white">Oferta</th>
+		<th class="text-white">Descuento</th>
+		<th class="text-white">Detalle</th>
+		<th class="text-white">Eliminar</th>
+	</tr>
+
+	<tr th:each="comida : ${comidas}">
+		<td>
+		<img th:src="@{/images/{img} ( img=${comida.imagen}) }" width="136" height="136">
+		</td>
+		<td class="text-white" th:text="${comida.id}"></td>
+		<td class="text-white" th:text="${comida.nombre}"></td>
+		<td class="text-white" th:text="${comida.descripcion}"></td>
+		<td class="text-white" th:text="${comida.precio}"></td>
+		<!-- <td th:text="${comida.oferta}"></td>-->
+		<!-- <td th:text="${comida.oferta == 1 ? 'Si' : 'No'}"></td>-->
+		<td>
+			<span th:if="${comida.oferta==1}" class="badge bg-success">Si</span> <!-- se trata de u  operador if-less -->
+			<span th:unless="${comida.oferta==1}" class="badge bg-danger">No</span>
+		</td>
+		<td class="text-white" th:text="${comida.descuento}"></td>
+		<td>
+			<a th:href="@{/comidas/view/{id} (id=${comida.id})}" class="btn btn-success">Detalle</a>
+		</td>
+		<td>
+			<a th:href="@{/comidas/delete(id=${comida.id})}" class="btn btn-danger">Eliminar</a>
+		</td>
+	</tr>
+	</table>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
