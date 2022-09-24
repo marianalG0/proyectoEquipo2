@@ -13,9 +13,7 @@ public class homeController {
 		@GetMapping("/") 
 		public String mostrarHome(Model model) {
 			return "home";
-<<<<<<< Updated upstream
-		}
-=======
+
 		} 
 		
 		//Encargado de renderizar la pagina principal
@@ -35,5 +33,5 @@ public class homeController {
 		} 
 		
 	
->>>>>>> Stashed changes
+
 }
