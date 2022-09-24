@@ -11,7 +11,6 @@ public class SeccionesController {
 
 	@RequestMapping(value="/index", method=RequestMethod.GET)
 	public String mostrarIndex(Model model) {
-		
 		return "secciones/listsecciones";
 	}
 	@RequestMapping(value="/create", method=RequestMethod.GET)

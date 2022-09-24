@@ -6,6 +6,7 @@ public class Comida {
 	private Integer id;
 	private String nombre;
 	private String descripcion;
+
 	private String descuento;
 	private Integer categoria;
 	public void setCategoria(Integer categoria) {
@@ -63,8 +64,8 @@ public class Comida {
 	}
 	@Override
 	public String toString() {
-		return "Comida [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", descuento=" + descuento
-				+ ", categoria=" + categoria + ", precio=" + precio + "]";
+		return "Comida [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", descuento=" + descuento + ", categoria=" + categoria + ", precio=" + precio + "]";
+
 	}
 	
 	
