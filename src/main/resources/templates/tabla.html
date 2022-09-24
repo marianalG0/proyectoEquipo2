@@ -2,7 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+
+<title>Tabla de comida</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <!-- Basic -->
   <meta charset="utf-8" />
@@ -18,19 +20,20 @@
   <title> Feane </title>
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
 
   <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" th:href="@{/https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css}" />
   <!-- nice select  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <link rel="stylesheet" th:href="@{/https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css}" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link th:href="@{css/responsive.css}" rel="stylesheet" />
 
 </head>
 <body style="background-color:#FBF7E8">
@@ -47,6 +50,9 @@
 		<th class="text-white">Nombre</th>
 		<th class="text-white">Descripcion</th>
 		<th class="text-white">Precio</th>
+
+		<th class="text-white">Categoria</th>
+
 		<th class="text-white">Oferta</th>
 		<th class="text-white">Descuento</th>
 		<th class="text-white">Detalle</th>
@@ -64,6 +70,14 @@
 		<!-- <td th:text="${comida.oferta}"></td>-->
 		<!-- <td th:text="${comida.oferta == 1 ? 'Si' : 'No'}"></td>-->
 		<td>
+
+			<span th:if="${comida.categoria==1}" class="text-white btn btn-warning">Hamburguesa</span> <!-- se trata de u  operador if-less -->
+			<span th:if="${comida.categoria==2}" class="text-white btn btn-success">Pizza</span>
+			<span th:if="${comida.categoria==3}" class="text-white btn btn-danger">Pasta</span> <!-- se trata de u  operador if-less -->
+			<span th:if="${comida.categoria==4}" class="text-white btn btn-info ">Papas fritas</span>
+		</td>
+		<td>
+
 			<span th:if="${comida.oferta==1}" class="badge bg-success">Si</span> <!-- se trata de u  operador if-less -->
 			<span th:unless="${comida.oferta==1}" class="badge bg-danger">No</span>
 		</td>
@@ -77,5 +91,9 @@
 	</tr>
 	</table>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+ <footer th:insert="fragments/footer ::pie-pagina" class="footer">
+    </footer>
+
 </body>
 </html>

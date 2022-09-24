@@ -21,6 +21,8 @@ public class ComidasServiceImpl implements IComidasService {
 		comida1.setDescripcion("Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit");
 		comida1.setPrecio(75.0);
 		comida1.setDescuento("15%");
+
+		comida1.setCategoria(1);
 		comida1.setOferta(1);
 		comida1.setImagen("f2.png");
 		
@@ -31,6 +33,8 @@ public class ComidasServiceImpl implements IComidasService {
 		comida2.setDescripcion("Veniam debitis quaeratofficiis quasi cupiditate quo, quisquam velit");
 		comida2.setPrecio(100.0);
 		comida2.setDescuento("5%");
+
+		comida2.setCategoria(1)
 		comida2.setOferta(1);
 		comida2.setImagen("f7.png");
 		
@@ -41,6 +45,8 @@ public class ComidasServiceImpl implements IComidasService {
 		comida3.setDescripcion("Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit");
 		comida3.setPrecio(70.0);
 		comida3.setDescuento("10%");
+
+		comida3.setCategoria(1);
 		comida3.setOferta(1);
 		comida3.setImagen("f8.png");
 		
@@ -51,6 +57,7 @@ public class ComidasServiceImpl implements IComidasService {
 		comida4.setDescripcion("Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit");
 		comida4.setPrecio(130.0);
 		comida4.setDescuento("0%");
+		comida4.setCategoria(2);
 		comida4.setOferta(0);
 		comida4.setImagen("f1.png");
 		
@@ -61,6 +68,7 @@ public class ComidasServiceImpl implements IComidasService {
 		comida5.setDescripcion("Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit");
 		comida5.setPrecio(100.0);
 		comida5.setDescuento("0%");
+		comida5.setCategoria(2);
 		comida5.setOferta(0);
 		comida5.setImagen("f3.png");
 		
@@ -71,6 +79,7 @@ public class ComidasServiceImpl implements IComidasService {
 		comida6.setDescripcion("Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit");
 		comida6.setPrecio(200.0);
 		comida6.setDescuento("3%");
+		comida6.setCategoria(2);
 		comida6.setOferta(1);
 		comida6.setImagen("f6.png");
 		
@@ -81,6 +90,7 @@ public class ComidasServiceImpl implements IComidasService {
 		comida7.setDescripcion("Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit");
 		comida7.setPrecio(50.0);
 		comida7.setDescuento("0%");
+		comida7.setCategoria(3);
 		comida7.setOferta(0);
 		comida7.setImagen("f4.png");
 		
@@ -91,6 +101,7 @@ public class ComidasServiceImpl implements IComidasService {
 		comida8.setDescripcion("Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit");
 		comida8.setPrecio(85.0);
 		comida8.setDescuento("3%");
+		comida8.setCategoria(3);
 		comida8.setOferta(1);
 		comida8.setImagen("f9.png");
 		
@@ -101,6 +112,7 @@ public class ComidasServiceImpl implements IComidasService {
 		comida9.setDescripcion("Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit");
 		comida9.setPrecio(75.0);
 		comida9.setDescuento("2%");
+		comida9.setCategoria(4);
 		comida9.setOferta(1);
 		comida9.setImagen("f5.png");
 		

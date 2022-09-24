@@ -23,7 +23,9 @@ public class ComidasController {
 	public String eliminar(@RequestParam("id") int idComida, Model model) {
 		System.out.println("Borrando la comida con id: " + idComida);
 		model.addAttribute("id", idComida);
-		return"mensaje";
+
+		return "mensaje";
+
 	}
 	@GetMapping("/view/{id}")
 	public String verDetalle(@PathVariable("id") int idComida, Model model) {

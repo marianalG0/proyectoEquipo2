@@ -5,6 +5,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<header th:insert="fragments/menu.html :: navegador" style="background-color:#222831"></header>
+
 		<h1>Comida con id [[${id}]] eliminada</h1>
+		
+<footer th:insert="fragments/footer ::pie-pagina" class="footer">
+    </footer>
+
 </body>
 </html>
