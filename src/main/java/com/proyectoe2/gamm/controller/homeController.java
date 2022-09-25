@@ -13,5 +13,6 @@ public class homeController {
 		@GetMapping("/") 
 		public String mostrarHome(Model model) {
 			return "home";
+			//marianazzzz
 		}
 }
