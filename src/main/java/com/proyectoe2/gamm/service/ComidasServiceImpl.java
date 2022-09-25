@@ -34,7 +34,7 @@ public class ComidasServiceImpl implements IComidasService {
 		comida2.setPrecio(100.0);
 		comida2.setDescuento("5%");
 
-		comida2.setCategoria(1)
+		comida2.setCategoria(1);
 		comida2.setOferta(1);
 		comida2.setImagen("f7.png");
 		
