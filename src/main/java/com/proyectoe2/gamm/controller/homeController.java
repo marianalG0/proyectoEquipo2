@@ -65,6 +65,7 @@ public class homeController {
 		@GetMapping("/book") 
 		public String mostrarbook(Model model) {
 			return "book";
+
 		}
 		
 		@GetMapping("/menu") 
