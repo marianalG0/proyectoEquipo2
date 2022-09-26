@@ -23,7 +23,7 @@ public class RegistroController {
 	return "book";
 	}
 	// @PostMapping("/save")
-	@RequestMapping(value="/save", method=RequestMethod.POST)
+	@RequestMapping(value="/save", method=RequestMethod.GET)
 	public String guardar(@RequestParam("nombre") String nombre,@RequestParam("precio") String precio,@RequestParam("descripcion") String descripcion,@RequestParam("descuento") String descuento, Model model) {
 		System.out.println("nombre: " + nombre);
 		System.out.println("precio: " + precio);
