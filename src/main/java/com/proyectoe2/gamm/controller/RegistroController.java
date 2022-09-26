@@ -20,7 +20,7 @@ public class RegistroController {
 	// @GetMapping("/create")
 	@RequestMapping(value="/create", method=RequestMethod.GET)
 	public String crear() {
-	return "Registro/FromRegistro";
+	return "book";
 	}
 	// @PostMapping("/save")
 	@RequestMapping(value="/save", method=RequestMethod.POST)

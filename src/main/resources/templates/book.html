@@ -38,57 +38,39 @@
     <div class="bg-box">
       <img src="images/hero-bg.jpg" alt="">
     </div>
-   
-   <header th:insert="fragments/menu.html :: navegador"></header>
-    <!-- end header section -->
+	<header th:insert="fragments/menu.html :: navegador"></header>
   </div>
 
-  <!-- book section -->
+
+ <!-- book section -->
   <section class="book_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
-          Book A Table
+          Registrar Producto
         </h2>
       </div>
+      
       <div class="row">
         <div class="col-md-6">
           <div class="form_container">
-            <form action="">
+            <form th:action="@{/Registro/save}" method="get">
               <div>
-                <input type="text" class="form-control" placeholder="Your Name" />
+                <input name="nombre" id="nombre" type="text" class="form-control" placeholder="Nombre del Producto" />
               </div>
               <div>
-                <input type="text" class="form-control" placeholder="Phone Number" />
+                <input name="precio" id="precio" type="text" class="form-control" placeholder="Precio del producto" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Your Email" />
+                <input name="descripcion" id="descripcion" type="text" class="form-control" placeholder="descripcion" />
               </div>
               <div>
-                <select class="form-control nice-select wide">
-                  <option value="" disabled selected>
-                    How many persons?
-                  </option>
-                  <option value="">
-                    2
-                  </option>
-                  <option value="">
-                    3
-                  </option>
-                  <option value="">
-                    4
-                  </option>
-                  <option value="">
-                    5
-                  </option>
-                </select>
+               <input name="descuento" id="descuento" type="text" class="form-control" placeholder="Descuento" />
               </div>
-              <div>
-                <input type="date" class="form-control">
-              </div>
+             
               <div class="btn_box">
                 <button>
-                  Book Now
+              Registrar Producto
                 </button>
               </div>
             </form>
