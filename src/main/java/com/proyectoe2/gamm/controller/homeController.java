@@ -60,7 +60,10 @@ public class homeController {
 		
 		@GetMapping("/menu") 
 		public String mostrarmenu(Model model) {
+			List<Comida> lista = serviceComidas.buscarTodo();
+			model.addAttribute("comidas", lista);
 			return "menu";
+
 		} 
 		
 
