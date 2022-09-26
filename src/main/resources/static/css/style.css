@@ -10,6 +10,10 @@ body {
   padding: 90px 0;
 }
 
+.center{
+	padding-left: 75px;
+}
+
 .layout_padding2 {
   padding: 75px 0;
 }
