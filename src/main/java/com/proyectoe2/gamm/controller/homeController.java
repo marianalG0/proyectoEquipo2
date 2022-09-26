@@ -1,6 +1,5 @@
 package com.proyectoe2.gamm.controller;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,18 +35,7 @@ public class homeController {
 		model.addAttribute("comida", comida);
 		return "detalle";
 	}
-	@GetMapping("/listado") /* URL: localhost:8080/listado */
-	public String mostrarListado(Model model) { /*Este metodo sirve para que podemos ingresar lista*/
-		List<String> lista = new LinkedList<String>(); /*Con esto podemos usar lista, recuerda importar su extension, el metodo list contiene cadenas*/
-		lista.add("Comida1");
-		lista.add("Comida2");
-		lista.add("comida2");
-		lista.add("comida");
-		
-		model.addAttribute("comida", lista); /*Una vez creada nuestra lista debemos importar el modelo, le asignamos un atributo "empleos"*/
-		
-		return "listado";
-	}
+
 	
 	//Encargado de renderizar la pagina principal
 		@GetMapping("/") 

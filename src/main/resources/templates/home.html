@@ -231,7 +231,7 @@
 
       <div class="filters-content">
         <div class="row grid">
-          <div class="col-sm-6 col-lg-4 all pizza " th:each="comida : ${comidas}"><!-- Empieza el each de comida -->
+          <div class="col-sm-6 col-lg-4 all" th:each="comida : ${comidas}"><!-- Empieza el each de comida -->
             <div class="box">
               <div>
                 <div class="img-box">
@@ -308,6 +308,8 @@
           </div><!-- Se termina la de cda alimento -->
          </div>
       </div>
+      
+      
       <div class="btn-box">
         <a th:href="@{/tabla}">
           View More
