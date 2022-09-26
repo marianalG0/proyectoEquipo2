@@ -13,9 +13,16 @@ body {
 .center{
 	padding-left: 75px;
 }
-
+.adorno{
+	padding-top: 20px;
+	 font-size: 2.5rem;
+	  color: #ffbe33;
+	
+}
 .layout_padding2 {
   padding: 75px 0;
+  font-family: "Open Sans", sans-serif;
+  
 }
 
 .layout_padding2-top {
