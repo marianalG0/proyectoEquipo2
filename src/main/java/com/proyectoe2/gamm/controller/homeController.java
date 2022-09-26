@@ -52,6 +52,8 @@ public class homeController {
 	//Encargado de renderizar la pagina principal
 		@GetMapping("/") 
 		public String mostrarHome(Model model) {
+			List<Comida> lista = serviceComidas.buscarTodo();
+			model.addAttribute("comidas", lista);
 			return "home";
 
 		} 
