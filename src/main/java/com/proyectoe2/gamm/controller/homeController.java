@@ -76,4 +76,15 @@ public class homeController {
 		} 
 		
 
+		@GetMapping("/descuentos") 
+		public String mostrardesc(Model model) {
+			List<Comida> lista = serviceComidas.buscarTodo();
+			model.addAttribute("comidas", lista);
+			return "descuentos";
+
+		} 
+		
+		
+		
+
 }
