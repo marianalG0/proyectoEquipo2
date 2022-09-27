@@ -41,7 +41,7 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Registrar Producto
+          Registrar Categoria
         </h2>
       </div>
       
@@ -50,21 +50,20 @@
           <div class="form_container">
             <form th:action="@{/Registro/save}" method="get">
               <div>
-                <input name="nombre" id="nombre" type="text" class="form-control" placeholder="Nombre del Producto" />
-              </div>
-              <div>
-                <input name="precio" id="precio" type="text" class="form-control" placeholder="Precio del producto" />
+                <select name="nombre" class="form-control">
+                	<option value="Burger">Burger</option>
+                	<option value="Pizza">Pizza</option>
+                	<option value="Pasta">Pasta</option>
+                	<option value="Fries">Fries</option>
+                </select>
               </div>
               <div>
                 <input name="descripcion" id="descripcion" type="text" class="form-control" placeholder="descripcion" />
               </div>
-              <div>
-               <input name="descuento" id="descuento" type="text" class="form-control" placeholder="Descuento" />
-              </div>
              
               <div class="btn_box">
                 <button>
-              Registrar Producto
+              Registrar 
                 </button>
               </div>
             </form>
