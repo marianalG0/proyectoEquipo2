@@ -9,7 +9,7 @@ public class ProyectoE2Application {
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoE2Application.class, args);
 		
-		//que pendej
+		
 	}
 
 }
