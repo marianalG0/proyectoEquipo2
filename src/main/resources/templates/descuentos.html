@@ -39,6 +39,7 @@
       <div class="container ">
         <div class="row">
           <div class="col-md-6  " th:each="comida : ${comidas}">
+          <div th:if="${comida.oferta==1}">
             <div class="box ">
               <div class="img-box">
                 <img class="rounded mx-auto d-block" th:src="@{/images/{img} (img=${comida.imagen})}" alt="Generic placeholder image" width="220" height="220">  
@@ -106,6 +107,7 @@
                 </a>
               </div>
             </div>
+          </div>
           </div>
               </div>
             </div>
